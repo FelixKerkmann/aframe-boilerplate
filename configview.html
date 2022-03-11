@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Showroom Config</title>
+    <meta name="description" content="Showroom Config">
+    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+    <style>
+        .input-number  {
+            width: 50px;
+        }
+        button, input{
+            margin: 5px 0;
+        }
+        .settings {
+            float: left;
+        }
+        .aframe iframe {
+            width: 750px;
+            height: 500px;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="settings">
+    <form method="post">
+        <label>Box position: </label>
+        <input type="number" id="box-position-x" class="input-number" value="-1">
+        <label> X </label>
+        <input type="number" id="box-position-y" class="input-number" value="0.5">
+        <label> Y </label>
+        <input type="number" id="box-position-z" class="input-number" value="-3">
+        <label> Z </label>
+        <br>
+        <label>Box rotation: </label>
+        <input type="number" id="box-rotation-x" class="input-number" value="0">
+        <label> X </label>
+        <input type="number" id="box-rotation-y" class="input-number" value="45">
+        <label> Y </label>
+        <input type="number" id="box-rotation-z" class="input-number" value="0">
+        <label> Z </label>
+        <br>
+        <label>Box color: </label>
+        <input type="color" id="box-color" value="#4CC3D9">
+        <br>
+        <label>Sphere position: </label>
+        <input type="number" id="sphere-position-x" class="input-number" value="0">
+        <label> X </label>
+        <input type="number" id="sphere-position-y" class="input-number" value="1.25">
+        <label> Y </label>
+        <input type="number" id="sphere-position-z" class="input-number" value="-5">
+        <label> Z </label>
+        <br>
+        <label>Sphere radius: </label>
+        <input type="number" id="sphere-radius" class="input-number" value="1.25">
+        <br>
+        <label>Sphere color: </label>
+        <input type="color" id="sphere-color" value="#EF2D5E">
+        <br>
+        <label>Cylinder position: </label>
+        <input type="number" id="cylinder-position-x" class="input-number" value="1">
+        <label> X </label>
+        <input type="number" id="cylinder-position-y" class="input-number" value="0.75">
+        <label> Y </label>
+        <input type="number" id="cylinder-position-z" class="input-number" value="-3">
+        <label> Z </label>
+        <br>
+        <label>Cylinder radius: </label>
+        <input type="number" id="cylinder-radius" class="input-number" value="0.5">
+        <br>
+        <label>Cylinder radius: </label>
+        <input type="number" id="cylinder-height" class="input-number" value="1.5">
+        <br>
+        <label>Cylinder color: </label>
+        <input type="color" id="cylinder-color" value="#FFC65D">
+        <br>
+        <label>Plane color: </label>
+        <input type="color" id="plane-color" value="#7BC8A4">
+        <br>
+        <button>Add Component</button>
+        <br>
+        <button>Change Camera Settings</button>
+        <br>
+        <button>Change Light Settings</button>
+        <br>
+        <button>Upload 3D Object</button>
+        <br>
+        <input type="submit" style="margin-left: 250px;">
+    </form>
+</div>
+<div class="aframe">
+    <iframe src="index.html">
+
+    </iframe>
+</div>
+</body>
+</html>
