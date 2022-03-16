@@ -5,7 +5,9 @@ AFRAME.registerComponent('change-color', {
     init: function(){
         var data = this.data;
         this.el.addEventListener('click', function(){
-            this.setAttribute('color', getRandomColor());
+            //this.setAttribute('color', getRandomColor());
+            let currcolor = this.getAttribute("material").color;
+            this.setAttribute('color', setNewColor(currcolor))
         })
     }
 });
@@ -17,4 +19,20 @@ function getRandomColor() {
         color += letters[Math.floor(Math.random() * 16)];
     }
     return color;
+}
+
+function setNewColor(color) {
+    const colors = [
+        "blueviolet",
+        "firebrick",
+        "darkorange",
+        "skyblue",
+        "gold",
+        "darkblue",
+        "sienna"
+        ];
+    let index = colors.indexOf(color) + 1;
+    if (index >= colors.length) { index = 0; }
+    return colors[index];
+
 }
