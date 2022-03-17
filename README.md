@@ -14,14 +14,12 @@ There are two easy options for obtaining this A-Frame scene. It's then up to you
 
 - clone project or download zip
 - extract /resources/pool/jacuzzi/jacuzzi.zip in same directory (you can overwrite readme.txt)
-- then in console:
 
-
+in console:
 
     npm install && npm start
 
-
-
+select view:
 - open vr [__http://localhost:3000/__](http://localhost:3000/)
 - configview: [__http://localhost:3000/configview.html__](http://localhost:3000/configview.html)
 
