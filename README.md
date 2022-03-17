@@ -17,7 +17,9 @@ There are two easy options for obtaining this A-Frame scene. It's then up to you
 - then in console:
 
 
+
     npm install && npm start
+
 
 
 - open vr [__http://localhost:3000/__](http://localhost:3000/)
