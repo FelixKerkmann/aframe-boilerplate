@@ -1,0 +1,1 @@
+extract jacuzzi.zip in resources/pool/jacuzzi
