@@ -1,0 +1,68 @@
+# 3ds Max Wavefront OBJ Exporter v0.94b - (c)2007 guruware
+# File Created: 17.01.2022 15:31:59
+
+newmtl Material_water
+	Ns 0.0000
+	Ni 1.5000
+	d 0.2500
+	Tr 0.2500
+	Tf 0.2500 0.2500 0.2500 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.8039 0.8118 0.9647
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.2010 0.2029 0.2412
+
+newmtl Steel
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.9529 0.8118 0.5137
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+
+newmtl Material_marble
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0706 0.0706 0.0706
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka Dark.jpg
+	map_Kd Dark.jpg
+
+newmtl Material_marble_light
+	Ns 70.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.9529 0.9529 0.9529
+	Ks 0.6300 0.6300 0.6300
+	Ke 0.0000 0.0000 0.0000
+	map_Ka Beige.jpg
+	map_Kd Beige.jpg
+
+newmtl Ceramic
+	Ns 70.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.9529 0.9529 0.9529
+	Ks 0.6300 0.6300 0.6300
+	Ke 0.0000 0.0000 0.0000
+	map_Ka tile.jpg
+	map_Kd tile.jpg

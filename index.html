@@ -4,19 +4,87 @@
   <meta charset="UTF-8">
   <title>Showroom</title>
   <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
-  <script src="color.js"></script>
+  <script src="components/color.js"></script>
+  <script src="components/fireplace.js"></script>
 </head>
 <body>
-<a-scene>
+<a-scene stats>
+  <a-assets>
+    <a-asset-item id="pool-o" src="resources/pool/jacuzzi/jacuzzi.obj"></a-asset-item>
+    <a-asset-item id="pool-m" src="resources/pool/jacuzzi/jacuzzi.mtl"></a-asset-item>
+    <a-asset-item id="bag-chair-o" src="resources/bag-chair-obj/bag-chair.obj"></a-asset-item>
+    <a-asset-item id="bag-chair-m" src="resources/bag-chair-obj/bag-chair.mtl"></a-asset-item>
+    <a-asset-item id="coffee-table-o" src="resources/wooden-coffe-table-obj/wooden-coffe-table.obj"></a-asset-item>
+    <a-asset-item id="coffee-table-m" src="resources/wooden-coffe-table-obj/wooden-coffe-table.mtl"></a-asset-item>
+    <a-asset-item id="fireplace1-o" src="resources/fireplace/fireplace1/fireplace1.obj"></a-asset-item>
+    <a-asset-item id="fireplace1-m" src="resources/fireplace/fireplace1/fireplace1.mtl"></a-asset-item>
+    <a-asset-item id="fireplace2-o" src="resources/fireplace/fireplace2/fireplace2.obj"></a-asset-item>
+    <a-asset-item id="fireplace2-m" src="resources/fireplace/fireplace2/fireplace2.mtl"></a-asset-item>
+    <a-asset-item id="gym-run-jog-o" src="resources/gym/gym-run-jog/gym-run-jog.obj"></a-asset-item>
+    <a-asset-item id="gym-run-jog-m" src="resources/gym/gym-run-jog/gym-run-jog.mtl"></a-asset-item>
+    <a-asset-item id="motor-o" src="resources/motor/motor/motor.obj"></a-asset-item>
+    <a-asset-item id="motor-m" src="resources/motor/motor/motor.mtl"></a-asset-item>
+  </a-assets>
+
+  <!-- Room -->
+  <a-plane position="0 0 -4" rotation="-90 0 0" width="10" height="10" color="darkseagreen" change-color></a-plane>
   <a-box position="0 2.5 -9" rotation="0 0 0" color="lightgrey" width="10" height="5" change-color></a-box>
   <a-box position="0 2.5 1" rotation="0 0 0" color="lightgrey" width="10" height="5" change-color></a-box>
   <a-box position="-5 2.5 -4" rotation="0 90 0" color="lightgrey" width="10" height="5" change-color></a-box>
   <a-box position="5 2.5 -4" rotation="0 90 0" color="lightgrey" width="10" height="5" change-color></a-box>
 
+  <!-- Standard Objects
   <a-box position="-2 0.5 -3" rotation="0 45 0" color="blueviolet" change-color></a-box>
   <a-sphere position="0 1.25 -6" radius="1.25" color="firebrick" change-color></a-sphere>
   <a-cylinder position="2 0.75 -3" radius="0.5" height="1.5" color="darkorange" change-color></a-cylinder>
-  <a-plane position="0 0 -4" rotation="-90 0 0" width="10" height="10" color="darkseagreen" change-color></a-plane>
+  -->
+
+  <!-- Changing Models -->
+  <a-text value="Click to change Object" position="4.5 2.5 -2" rotation="0 -90 0" line-height="20" color="white"></a-text>
+  <a-box position="4.75 2 -1" rotation="0 -90 0" width="0.5" height="0.5"></a-box>
+
+  <a-entity id="pool"
+            obj-model="obj: #pool-o; mtl: #pool-m"
+            scale="0.0005 0.0005 0.0005"
+            position="2.5 0 -1.5"></a-entity>
+
+  <a-entity id="gym-run-jog"
+            obj-model="obj: #gym-run-jog-o; mtl: #gym-run-jog-m"
+            scale="0.001 0.001 0.001"
+            position="0 0 -4"
+            rotation="0 180 0"
+            visible="false"></a-entity>
+
+  <!-- Living Space -->
+  <a-entity obj-model="obj: #bag-chair-o; mtl: #bag-chair-m"
+            scale="2 2 2"
+            position="-4 0 -1"
+            rotation="0 90 0"></a-entity>
+
+  <a-entity obj-model="obj: #coffee-table-o; mtl: #coffee-table-m"
+            scale="0.5 0.5 0.5"
+            position="-2.5 0 -1"
+            rotation="0 0 0"></a-entity>
+
+  <!-- Fireplace -->
+  <a-text value="Click to change fireplace" position="-4.5 2.5 -1.5" rotation="0 90 0" line-height="20" color="white"></a-text>
+  <a-box position="-4.75 2 -2.5" rotation="0 -90 0" width="0.5" height="0.5" change-fireplace-model></a-box>
+  <a-entity id="fireplace1"
+            obj-model="obj: #fireplace1-o; mtl: #fireplace1-m"
+            scale="0.0015 0.0015 0.0015"
+            position="-4 0 -4.5"
+            rotation="0 90 0"
+            visible="true"
+            change-fireplace-model></a-entity>
+
+  <a-entity id="fireplace2"
+            obj-model="obj: #fireplace2-o; mtl: #fireplace2-m"
+            scale="0.0002 0.0002 0.0002"
+            position="-4.25 0 -4.5"
+            rotation="0 0 0"
+            visible="false"
+            change-fireplace-model></a-entity>
+
   <a-camera>
     <a-cursor></a-cursor>
   </a-camera>
