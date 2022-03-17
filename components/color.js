@@ -6,7 +6,6 @@ AFRAME.registerComponent('change-color', {
         var data = this.data;
         this.el.addEventListener('click', function(){
             //this.setAttribute('color', getRandomColor());
-            console.log("in function");
             let currcolor = this.getAttribute("material").color;
             this.setAttribute('color', setNewColor(currcolor))
         })
@@ -30,11 +29,9 @@ function setNewColor(color) {
         "skyblue",
         "darkblue",
         "sienna",
-        "lightgrey",
         "darkseagreen",
         ];
     let index = colors.indexOf(color) + 1;
     if (index >= colors.length) { index = 0; }
     return colors[index];
-
 }

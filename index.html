@@ -6,6 +6,7 @@
   <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
   <script src="components/color.js"></script>
   <script src="components/fireplace.js"></script>
+  <script src="components/wall.js"></script>
 </head>
 <body>
 <a-scene stats>
@@ -28,10 +29,10 @@
 
   <!-- Room -->
   <a-plane position="0 0 -4" rotation="-90 0 0" width="10" height="10" color="darkseagreen" change-color></a-plane>
-  <a-box position="0 2.5 -9" rotation="0 0 0" color="lightgrey" width="10" height="5" change-color></a-box>
-  <a-box position="0 2.5 1" rotation="0 0 0" color="lightgrey" width="10" height="5" change-color></a-box>
-  <a-box position="-5 2.5 -4" rotation="0 90 0" color="lightgrey" width="10" height="5" change-color></a-box>
-  <a-box position="5 2.5 -4" rotation="0 90 0" color="lightgrey" width="10" height="5" change-color></a-box>
+  <a-box class="wall" position="0 2.5 -9" rotation="0 0 0" color="lightgrey" width="10" height="5" change-wall-color></a-box>
+  <a-box class="wall" position="0 2.5 1" rotation="0 0 0" color="lightgrey" width="10" height="5" change-wall-color></a-box>
+  <a-box class="wall" position="-5 2.5 -4" rotation="0 90 0" color="lightgrey" width="10" height="5" change-wall-color></a-box>
+  <a-box class="wall" position="5 2.5 -4" rotation="0 90 0" color="lightgrey" width="10" height="5" change-wall-color></a-box>
 
   <!-- Standard Objects
   <a-box position="-2 0.5 -3" rotation="0 45 0" color="blueviolet" change-color></a-box>
