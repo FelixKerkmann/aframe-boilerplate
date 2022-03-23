@@ -8,10 +8,12 @@
   <script src="components/fireplace.js"></script>
   <script src="components/wall.js"></script>
   <script src="components/object-change.js"></script>
+  <script src="components/floor.js"></script>
 </head>
 <body>
 <a-scene stats>
   <a-assets>
+    <!-- Objects -->
     <a-asset-item id="pool-o" src="resources/pool/jacuzzi/jacuzzi.obj"></a-asset-item>
     <a-asset-item id="pool-m" src="resources/pool/jacuzzi/jacuzzi.mtl"></a-asset-item>
     <a-asset-item id="bag-chair-o" src="resources/bag-chair-obj/bag-chair.obj"></a-asset-item>
@@ -26,14 +28,32 @@
     <a-asset-item id="gym-run-jog-m" src="resources/gym/gym-run-jog/gym-run-jog.mtl"></a-asset-item>
     <a-asset-item id="motor-o" src="resources/motor/motor/motor.obj"></a-asset-item>
     <a-asset-item id="motor-m" src="resources/motor/motor/motor.mtl"></a-asset-item>
+
+    <!-- Textures -->
+    <img id="wood-floor" src="resources/textures/wood_floor.jpg">
+    <img id="wood-floor-2" src="resources/textures/wood_floor_2.jpg">
+    <img id="tiles" src="resources/textures/tiles.jpg">
+    <img id="tiles-pattern" src="resources/textures/tiles_pattern.jpg">
+    <img id="stones" src="resources/textures/stones.jpg">
+    <img id="concrete" src="resources/textures/concrete.png">
+
   </a-assets>
 
   <!-- Room -->
-  <a-plane position="0 0 -4" rotation="-90 0 0" width="10" height="10" color="darkseagreen" change-color></a-plane>
   <a-box class="wall" position="0 2.5 -9" rotation="0 0 0" color="lightgrey" width="10" height="5" change-wall-color></a-box>
   <a-box class="wall" position="0 2.5 1" rotation="0 0 0" color="lightgrey" width="10" height="5" change-wall-color></a-box>
   <a-box class="wall" position="-5 2.5 -4" rotation="0 90 0" color="lightgrey" width="10" height="5" change-wall-color></a-box>
   <a-box class="wall" position="5 2.5 -4" rotation="0 90 0" color="lightgrey" width="10" height="5" change-wall-color></a-box>
+
+  <a-text value="Click to change floor" position="4.5 2.5 -5" rotation="0 -90 0" line-height="20" color="white"></a-text>
+  <a-box position="4.75 2 -4" rotation="0 -90 0" width="0.5" height="0.5" change-floor-texture></a-box>
+  <a-plane  id="floor"
+            position="0 0 -4"
+            rotation="-90 0 0"
+            src="#wood-floor"
+            height="10"
+            width="10"
+            change-floor-texture></a-plane>
 
   <!-- Standard Objects
   <a-box position="-2 0.5 -3" rotation="0 45 0" color="blueviolet" change-color></a-box>

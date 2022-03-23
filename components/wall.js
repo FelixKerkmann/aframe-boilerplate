@@ -5,16 +5,16 @@ AFRAME.registerComponent('change-wall-color', {
     init: function(){
         var data = this.data;
         this.el.addEventListener('click', function(){
-            let currcolor = this.getAttribute("material").color;
+            let cur = this.getAttribute("material").color;
             let walls = document.querySelectorAll(".wall");
             walls.forEach(function (elem) {
-                elem.setAttribute("color", setNewColor(currcolor))
+                elem.setAttribute("color", setNewColor(cur))
             })
         })
     }
 });
 
-function setNewColor(color) {
+function setNewColor(cur) {
     const colors = [
         "antiquewhite",
         "burlywood",
@@ -23,7 +23,7 @@ function setNewColor(color) {
         "sienna",
         "lightgrey",
     ];
-    let index = colors.indexOf(color) + 1;
+    let index = colors.indexOf(cur) + 1;
     if (index >= colors.length) {
         index = 0;
     }
