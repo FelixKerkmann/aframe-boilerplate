@@ -14,8 +14,10 @@
 <a-scene stats>
   <a-assets>
     <!-- Objects -->
+    <!--
     <a-asset-item id="pool-o" src="resources/pool/jacuzzi/jacuzzi.obj"></a-asset-item>
     <a-asset-item id="pool-m" src="resources/pool/jacuzzi/jacuzzi.mtl"></a-asset-item>
+    -->
     <a-asset-item id="bag-chair-o" src="resources/bag-chair-obj/bag-chair.obj"></a-asset-item>
     <a-asset-item id="bag-chair-m" src="resources/bag-chair-obj/bag-chair.mtl"></a-asset-item>
     <a-asset-item id="coffee-table-o" src="resources/wooden-coffe-table-obj/wooden-coffe-table.obj"></a-asset-item>
@@ -65,18 +67,21 @@
   <a-text value="Click to change Object" position="4.5 2.5 -2" rotation="0 -90 0" line-height="20" color="white"></a-text>
   <a-box position="4.75 2 -1" rotation="0 -90 0" width="0.5" height="0.5" change-object></a-box>
 
+  <!--
   <a-entity id="pool"
             obj-model="obj: #pool-o; mtl: #pool-m"
             scale="0.0005 0.0005 0.0005"
             position="2.5 0 -1.5"
-            change-object></a-entity>
+            change-object
+            visible="false"></a-entity>
+            -->
 
   <a-entity id="gym-run-jog"
             obj-model="obj: #gym-run-jog-o; mtl: #gym-run-jog-m"
             scale="0.001 0.001 0.001"
             position="2.5 0 -1.5"
             rotation="0 180 0"
-            visible="false"
+            visible="true"
             change-object></a-entity>
 
   <a-entity id="motor"
