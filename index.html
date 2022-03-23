@@ -7,6 +7,7 @@
   <script src="components/color.js"></script>
   <script src="components/fireplace.js"></script>
   <script src="components/wall.js"></script>
+  <script src="components/object-change.js"></script>
 </head>
 <body>
 <a-scene stats>
@@ -42,19 +43,29 @@
 
   <!-- Changing Models -->
   <a-text value="Click to change Object" position="4.5 2.5 -2" rotation="0 -90 0" line-height="20" color="white"></a-text>
-  <a-box position="4.75 2 -1" rotation="0 -90 0" width="0.5" height="0.5"></a-box>
+  <a-box position="4.75 2 -1" rotation="0 -90 0" width="0.5" height="0.5" change-object></a-box>
 
   <a-entity id="pool"
             obj-model="obj: #pool-o; mtl: #pool-m"
             scale="0.0005 0.0005 0.0005"
-            position="2.5 0 -1.5"></a-entity>
+            position="2.5 0 -1.5"
+            change-object></a-entity>
 
   <a-entity id="gym-run-jog"
             obj-model="obj: #gym-run-jog-o; mtl: #gym-run-jog-m"
             scale="0.001 0.001 0.001"
-            position="0 0 -4"
+            position="2.5 0 -1.5"
             rotation="0 180 0"
-            visible="false"></a-entity>
+            visible="false"
+            change-object></a-entity>
+
+  <a-entity id="motor"
+            obj-model="obj: #motor-o; mtl: #motor-m"
+            scale="0.01 0.01 0.01"
+            position="2.5 0 -1.5"
+            rotation="0 180 0"
+            visible="false"
+            change-object></a-entity>
 
   <!-- Living Space -->
   <a-entity obj-model="obj: #bag-chair-o; mtl: #bag-chair-m"
