@@ -26,9 +26,6 @@
     <a-asset-item id="gym-run-jog-m" src="resources/gym/gym-run-jog/gym-run-jog.mtl"></a-asset-item>
     <a-asset-item id="motor-o" src="resources/motor/motor/motor.obj"></a-asset-item>
     <a-asset-item id="motor-m" src="resources/motor/motor/motor.mtl"></a-asset-item>
-	<a-asset-item id="sink-obj" src="resources/sink/sink/sink.obj"></a-asset-item>
-    <a-asset-item id="sink-mtl" src="resources/sink/sink/sink.mtl"></a-asset-item>
-
 
     <!-- Textures -->
     <img id="wood-floor" src="resources/textures/wood_floor.jpg">
@@ -216,18 +213,11 @@
 
   <a-entity id="fireplace2"
             obj-model="obj: #fireplace2-o; mtl: #fireplace2-m"
-            scale="0.0001 0.0001 0.0001"
+            scale="1 1 1"
             position="-4.25 0 0"
             rotation="0 0 0"
             visible="false"
             change-fireplace-model></a-entity>
-			
-	  <a-entity id="sink"
-            obj-model="obj: #sink-obj; mtl: #sink-mtl"
-            scale="0.020 0.020 0.020"
-            position="-2 0 0"
-            rotation="0 90 0"
-            visible="true"></a-entity>
 
   <a-camera>
     <a-cursor></a-cursor>
