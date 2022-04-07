@@ -1,29 +1,24 @@
-# 3ds Max Wavefront OBJ Exporter v0.94b - (c)2007 guruware
-# File Created: 15.11.2021 08:22:51
+# Blender MTL File: 'None'
+# Material Count: 2
 
 newmtl st_tile
-	Ns 70.0000
-	Ni 1.5000
-	d 1.0000
-	Tr 1.0000
-	Tf 1.0000 1.0000 1.0000 
-	illum 2
-	Ka 0.0000 0.0000 0.0000
-	Kd 0.7843 0.7843 0.7843
-	Ks 0.6300 0.6300 0.6300
-	Ke 0.0000 0.0000 0.0000
-	map_Kd Tile2sml.jpg
+Ns 70.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.784300 0.784300 0.784300
+Ks 0.630000 0.630000 0.630000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd Tile2sml.jpg
 
 newmtl standart_metal
-	Ns 40.0000
-	Ni 1.5000
-	d 1.0000
-	Tr 1.0000
-	Tf 1.0000 1.0000 1.0000 
-	illum 2
-	Ka 0.0000 0.0000 0.0000
-	Kd 0.4941 0.4118 0.3020
-	Ks 0.6300 0.6300 0.6300
-	Ke 0.0000 0.0000 0.0000
-	map_Ka metalchr.jpg
-	map_Kd metalchr.jpg
+Ns 40.000007
+Ka 1.000000 1.000000 1.000000
+Kd 0.494100 0.411800 0.302000
+Ks 0.630000 0.630000 0.630000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd metalchr.jpg
