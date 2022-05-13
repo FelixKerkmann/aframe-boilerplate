@@ -123,9 +123,12 @@
             visible="false"
             change-fireplace-model></a-entity>
 
-  <a-camera>
+  <a-entity hand-controls="left"></a-entity>
+  <a-entity hand-controls="right"></a-entity>
+  <a-entity tracked-controls="controller: 0; idPrefix: OpenVR"></a-entity>
+  <a-entity camera look-controls>
     <a-cursor></a-cursor>
-  </a-camera>
+  </a-entity>
 </a-scene>
 </body>
 </html>
