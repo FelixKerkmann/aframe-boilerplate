@@ -11,7 +11,6 @@
   <script src="components/object-change.js"></script>
   <script src="components/floor.js"></script>
   <script src="components/input-listen.js"></script>
-
 </head>
 <body>
 <a-scene stats>
@@ -41,6 +40,41 @@
     <img id="tiles-pattern" src="resources/textures/tiles_pattern.jpg">
     <img id="stones" src="resources/textures/stones.jpg">
     <img id="concrete" src="resources/textures/concrete.png">
+
+    <!-- Avatar -->
+    <template id="avatar-template">
+      <a-entity class="avatar">
+        <a-sphere class="head"
+                  scale="0.45 0.5 0.4"
+        ></a-sphere>
+        <a-entity class="face"
+                  position="0 0.05 0"
+        >
+          <a-sphere class="eye"
+                    color="#efefef"
+                    position="0.16 0.1 -0.35"
+                    scale="0.12 0.12 0.12"
+          >
+            <a-sphere class="pupil"
+                      color="#000"
+                      position="0 0 -1"
+                      scale="0.2 0.2 0.2"
+            ></a-sphere>
+          </a-sphere>
+          <a-sphere class="eye"
+                    color="#efefef"
+                    position="-0.16 0.1 -0.35"
+                    scale="0.12 0.12 0.12"
+          >
+            <a-sphere class="pupil"
+                      color="#000"
+                      position="0 0 -1"
+                      scale="0.2 0.2 0.2"
+            ></a-sphere>
+          </a-sphere>
+        </a-entity>
+      </a-entity>
+    </template>
 
   </a-assets>
 
@@ -127,19 +161,24 @@
             change-fireplace-model></a-entity>
 
   <a-entity id="cameraRig">
-    <a-entity id="head" camera wasd-controls look-controls position="0 1.6 0">
+    <a-entity id="player" camera wasd-controls look-controls position="0 1.6 0"
+              networked="template:#avatar-template;attachTemplateToLocal:false;" random-color>
+      <a-sphere class="head"
+                visible="false"
+                random-color
+      ></a-sphere>
     </a-entity>
     <a-entity id="ctlL"
-              teleport-controls="cameraRig: #cameraRig; teleportOrigin: #head; startEvents: teleportstart; endEvents: teleportend"
-              raycaster="objects: far:1.2; " oculus-touch-controls="hand: left" input-listen>
-      <a-text value="Grip: Grab large object\nX: Teleport" position="0 0.08 0"
+              teleport-controls="cameraRig: #cameraRig; teleportOrigin: #player; startEvents: teleportstart; endEvents: teleportend"
+              oculus-touch-controls="hand: left" input-listen>
+      <a-text value="X: Teleport" position="0 0.08 0"
               rotation="-90 0 0" scale="0.1 0.1 0.1" align="center" color="#FFFFFF"></a-text>
       <a-sphere radius="0.01" position="0 0 -1.2" color="#FFFFFF"></a-sphere>
     </a-entity>
     <a-entity id="ctlR"
-              teleport-controls="cameraRig: #cameraRig; teleportOrigin: #head; startEvents: teleportstart; endEvents: teleportend"
-              raycaster="objects: far:1.2; " oculus-touch-controls="hand: right" input-listen>
-      <a-text value="Grip: Grab large object\nA: Teleport"
+              teleport-controls="cameraRig: #cameraRig; teleportOrigin: #player; startEvents: teleportstart; endEvents: teleportend"
+              oculus-touch-controls="hand: right" input-listen>
+      <a-text value="A: Teleport"
               position="0 0.08 0" rotation="-90 0 0" scale="0.1 0.1 0.1" align="center" color="#FFFFFF"></a-text>
       <a-sphere radius="0.01" position="0 0 -1.2" color="#FFFFFF"></a-sphere>
     </a-entity>
